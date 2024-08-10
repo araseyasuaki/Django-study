@@ -27,5 +27,21 @@ def info(request):
   return render(request, 'info.html', context=context)
 
 def if_view(request):
-  age = 17
+  age = 19
   return render(request, 'if.html', context={'age': age})
+
+def for_view(request):
+  books = [
+    {'name': 'コイキング', 'type': '水'},
+    {'name': 'ギャラドス', 'type': '水・飛行'},
+  ]
+  person = {
+    'realname': '荒瀬康明',
+    'age': '19',
+    'height': '179',
+  }
+  context = {
+    'books': books,
+    'person': person,
+  }
+  return render(request, 'for.html', context)

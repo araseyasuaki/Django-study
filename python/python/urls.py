@@ -24,4 +24,5 @@ urlpatterns = [
     path('baidu', views.baidu, name='baidu'),
     path('info', views.info, name='info'),
     path('if', views.if_view, name='if'),
+    path('for', views.for_view, name='for')
 ]
