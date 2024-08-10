@@ -15,9 +15,17 @@ def info(request):
     {'name': 'コイキング', 'type': '水'},
     {'name': 'ギャラドス', 'type': '水・飛行'},
   ]
+  class Person:
+    def __init__(self, realname):
+      self.realname = realname
   context = {
     'username': username,
     'book': book,
-    'books': books
+    'books': books,
+    'person': Person("智スーパーサイヤ人")
   }
   return render(request, 'info.html', context=context)
+
+def if_view(request):
+  age = 17
+  return render(request, 'if.html', context={'age': age})
