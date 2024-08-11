@@ -54,3 +54,7 @@ def with_vier(request):
     ]
   }
   return render(request, 'with.html', context)
+
+def url_view(request):
+  return render(request, 'url.html')
+

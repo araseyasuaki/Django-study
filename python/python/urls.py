@@ -26,4 +26,5 @@ urlpatterns = [
     path('if', views.if_view, name='if'),
     path('for', views.for_view, name='for'),
     path('with', views.with_vier, name='with'),
+    path('url', views.url_view, name='url')
 ]
