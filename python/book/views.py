@@ -32,8 +32,8 @@ def if_view(request):
 
 def for_view(request):
   books = [
-    {'name': 'コイキング', 'type': '水'},
-    {'name': 'ギャラドス', 'type': '水・飛行'},
+    # {'name': 'コイキング', 'type': '水'},
+    # {'name': 'ギャラドス', 'type': '水・飛行'},
   ]
   person = {
     'realname': '荒瀬康明',
@@ -45,3 +45,6 @@ def for_view(request):
     'person': person,
   }
   return render(request, 'for.html', context)
+
+def with_vier(request):
+  return render(reqest, 'with.html')

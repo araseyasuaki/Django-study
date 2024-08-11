@@ -14,6 +14,18 @@
       </tr>
     {% endfor %}
   </tbody>
+  <br/>
+  <tbody>
+    {% for book in books reversed %}
+      <tr>
+        <td>{{forloop.counter0}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.type}}</td>
+      </tr>
+      {% empty %}
+      <tr>残存数０</tr>
+    {% endfor %}
+  </tbody>
   <div>
     {% for key, value in person.items %}
       <p>{{key}}:{{value}}</p>
