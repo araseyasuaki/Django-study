@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 
@@ -58,3 +58,5 @@ def with_vier(request):
 def url_view(request):
   return render(request, 'url.html')
 
+def book_detail(request, book_id):
+  return HttpResponse(f'ポケモンNo.は：{book_id}')
