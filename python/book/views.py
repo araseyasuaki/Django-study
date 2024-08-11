@@ -47,4 +47,10 @@ def for_view(request):
   return render(request, 'for.html', context)
 
 def with_vier(request):
-  return render(reqest, 'with.html')
+  context = {
+    'books': [
+      {'name': 'コイキング', 'type': '水'},
+      {'name': 'ギャラドス', 'type': '水・飛行'},
+    ]
+  }
+  return render(request, 'with.html', context)
