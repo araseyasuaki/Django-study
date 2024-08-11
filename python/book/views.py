@@ -78,3 +78,6 @@ def template_form(request):
     "articles": ['ポケモンサービス終了', 'ドラクエ著者権侵害']
   }
   return render(request, "xfz_index.html", context)
+
+def static_demo(request):
+  return render(request, 'static.html')

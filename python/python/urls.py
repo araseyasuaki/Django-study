@@ -29,5 +29,6 @@ urlpatterns = [
     path('url', views.url_view, name='url'),
     path('book/<book_id>', views.book_detail, name='book_detail'),
     path('filter', views.filter_view, name='filter'),
-    path('template/from', views.template_form, name="template_form")
+    path('template/from', views.template_form, name="template_form"),
+    path('sta', views.static_demo, name='static_view')
 ]
