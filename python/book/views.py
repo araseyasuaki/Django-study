@@ -60,3 +60,11 @@ def url_view(request):
 
 def book_detail(request, book_id):
   return HttpResponse(f'ポケモンNo.は：{book_id}')
+
+
+def filter_view(request):
+  greet = "Hello World, Hello Django"
+  context = {
+    "greet": greet,
+  }
+  return render(request, 'filter.html', context)
