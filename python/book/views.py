@@ -72,3 +72,9 @@ def filter_view(request):
     'html': "<h1>ようこそ</h1>"
   }
   return render(request, 'filter.html', context)
+
+def template_form(request):
+  context = {
+    "articles": ['ポケモンサービス終了', 'ドラクエ著者権侵害']
+  }
+  return render(request, "xfz_index.html", context)
