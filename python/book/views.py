@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from datetime import datetime
 
 # Create your views here.
 
@@ -66,5 +67,6 @@ def filter_view(request):
   greet = "Hello World, Hello Django"
   context = {
     "greet": greet,
+    'birthday': datetime.now(),
   }
   return render(request, 'filter.html', context)
