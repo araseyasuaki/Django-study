@@ -68,5 +68,6 @@ def filter_view(request):
   context = {
     "greet": greet,
     'birthday': datetime.now(),
+    'profile': ''
   }
   return render(request, 'filter.html', context)
