@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
-def fromtpage(request):
+def frontpage(request):
   return render(request, 'blog/frontpage.html')
