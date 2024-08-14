@@ -5,4 +5,22 @@
   <small>{{post.posted_date}}</small>
   <p>{{post.intro}}</p>
   <p>{{post.body}}</p>
+  <h2>コメント</h2>
+  {% for comment in post.comments.all %}
+    <p>
+      <strong>{{comment.name}}</strong>
+      <small>{{comment.data_added}}</small>
+      {{comment.body}}
+    </p>
+    {% empty %}
+      <div>
+        <p>まだコメントがありません。</p>
+      </div>
+  {% endfor %}
+  <h2>コメントを追加</h2>
+  <form action='.' method='post'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>送信</button>
+  </form>
 {% endblock %}
